@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🌦️ Weather App</h1>
+
+    <div class="datetime" id="datetime">📅 Loading date and time...</div>
+
+    <div class="toggle-mode">
+      <label class="switch">
+        <input type="checkbox" id="modeToggle">
+        <span class="slider round"></span>
+      </label>
+      <span id="modeLabel">Light Mode</span>
+    </div>
+
+    <div class="search-box">
+      <input list="cities" id="cityInput" placeholder="Enter city name..." />
+      <datalist id="cities">
+        <option value="Chennai"><option value="London"><option value="New York">
+        <option value="Tokyo"><option value="Paris"><option value="Sydney">
+      </datalist>
+      <button onclick="getWeather()">🔍</button>
+      <button onclick="refreshWeather()">🔁</button>
+    </div>
+
+    <div class="weather-box" id="weatherBox">
+      <p class="info">Enter a city to get weather info 🌍</p>
+    </div>
+  </div>
+
+  <audio id="searchSound" src="click.mp3" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
